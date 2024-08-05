@@ -18,7 +18,7 @@
   margin-top: -520px;
   box-shadow: 0 4px 15px var(--primary-color);
   position: relative;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #ffff;
 }
 
 .react-calendar__navigation {
