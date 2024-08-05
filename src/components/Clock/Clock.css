@@ -10,8 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed; /* Mantém o relógio fixo na posição desejada */
-  margin-top: -150px; /* Ajuste a posição superior conforme necessário */
+  position: relative; /* Mantém o relógio relativo */
+  margin-top: 40px; /* Ajuste a posição superior conforme necessário */
   margin-left: 700px; /* Ajuste a posição direita conforme necessário */
   width: 460px;
   height: 80px;
