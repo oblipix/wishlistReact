@@ -1,0 +1,115 @@
+/* src/components/Calendar/Calendar.css */
+
+.react-calendar {
+  background-image: linear-gradient(
+      rgba(29, 17, 32, 0.774),
+      rgba(29, 17, 32, 0.774)
+    ),
+    url("https://img.freepik.com/fotos-premium/fundo-da-via-lactea-galaxia-roxo-fundos-roxos-resumo_53876-219260.jpg?w=360");
+  background-size: cover;
+  border-radius: 20px;
+  font-family: "Inconsolata", monospace;
+  text-transform: uppercase;
+  font-size: 15px;
+  width: 420px;
+  color: #ffffff;
+  padding: 20px;
+  margin-left: 700px;
+  margin-top: -520px;
+  box-shadow: 0 4px 15px var(--primary-color);
+  position: fixed;
+  border-bottom: 1px solid #ffffff;
+}
+
+.react-calendar__navigation {
+  background: #00000088;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background: none;
+  color: var(--tertiary-color);
+  cursor: pointer;
+}
+
+.react-calendar__tile {
+  background: none; /* Remove o fundo das datas */
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  border: none; /* Remove bordas das datas */
+  margin: 0; /* Remove margem se houver */
+  box-shadow: none; /* Remove sombras das datas */
+}
+
+.react-calendar__tile--now {
+  background: var(--secondary-color);
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+.react-calendar__tile--now:hover {
+  background: #00000071;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+.react-calendar__tile--active {
+  background: none; /* Remove o fundo da data ativa */
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  color: #ffffff;
+  background: none; /* Remove o fundo ao hover da data ativa */
+}
+
+.react-calendar__month-view__weekdays {
+  color: #ffffff;
+  padding: 10px;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #ffffff;
+}
+
+/* Estilo dos títulos dos dias da semana */
+.react-calendar__month-view__weekdays__weekday {
+  display: inline-block;
+  width: 50px; /* Ajuste a largura conforme necessário */
+  text-align: center;
+}
+
+.react-calendar__navigation__label,
+.react-calendar__navigation__arrow {
+  background: var(--secondary-color); /* Ajuste a cor conforme necessário */
+  color: var(--primary-color); /* Ajuste a cor conforme necessário */
+}
+
+.react-calendar__navigation__label:enabled:hover,
+.react-calendar__navigation__label:enabled:focus,
+.react-calendar__navigation__label:enabled:active,
+.react-calendar__navigation__arrow:enabled:hover,
+.react-calendar__navigation__arrow:enabled:focus,
+.react-calendar__navigation__arrow:enabled:active {
+  background: var(--secondary-color); /* Ajuste a cor conforme necessário */
+  color: var(--primary-color); /* Ajuste a cor conforme necessário */
+}

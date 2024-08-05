@@ -1,38 +1,155 @@
 .App {
+  position: relative;
+  background: repeating-linear-gradient(
+      to right,
+      #d6d5d58f 0,
+      #d6d5d58f 1px,
+      transparent 1px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d6d5d58f 0,
+      #d6d5d58f 1px,
+      transparent 1px,
+      transparent 30px
+    ),
+    linear-gradient(to bottom, #e0e0e0 1px, transparent 1px) repeat-y;
+  background-size: 30px 30px, 30px 30px, 100% 30px; /* Define o tamanho das listras verticais, horizontais e linhas de fundo */
+  border: 8px solid #d6d5d58f; /* Adiciona uma borda  ao redor do contêiner */
+  padding: 20px;
+  text-align: center;
+  width: 610px;
+  height: 570px; /* Define a altura fixa para permitir a rolagem */
+  margin-top: 12px;
+  margin-left: 20px;
+  color: var(--primary-color);
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+  overflow-y: auto; /* Adiciona a barra de rolagem vertical */
+  border-radius: 50px;
+  box-shadow: 0 4px 10px var(--primary-color);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #442150;
+  --secondary-color: #8651ca;
+  --tertiary-color: #e1c0f7;
+  --quartenary-color: #f3f7becc;
+}
+
+h1 {
+  margin-top: 5px;
+  color: var(--quartenary-color);
+  font-size: 60px;
+  text-shadow: 4px 0px 1px var(--tertiary-color);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+input,
+.input:hover {
+  background: var(--tertiary-color);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 50px;
+  width: 250px;
+  text-align: center;
+  margin-top: -15px;
+  box-shadow: 2px 0px 10px var(--primary-color);
+}
+
+input:focus:hover {
+  box-shadow: 2px 0px 10px #000;
+}
+
+ul {
+  padding: 30px;
+  margin: 0; /* Remove margin extra na lista */
+}
+
+li {
+  display: flex;
+  align-items: center;
+  list-style-type: none; /* Remove os marcadores padrão da lista */
+  justify-content: space-between;
+  padding: 10px 0; /* Adiciona padding vertical para espaçamento */
+}
+
+li::before {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #b08dbb; /* Cor do seletor não marcado */
+}
+
+li.selected::before {
+  background-color: #81638b; /* Cor do seletor marcado */
+}
+
+.selected {
+  padding: auto;
+  background-color: var(--quartenary-color);
+  text-decoration: line-through;
+}
+
+.button-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 0;
+}
+
+.button-icon svg {
+  color: var(--primary-color);
+  width: 60px;
+  height: 20px;
+}
+
+.button-icon svg:hover {
+  color: var(--secondary-color);
+  width: 60px;
+  height: 20px;
+}
+
+input[type="text"] {
+  margin-right: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+buttonn {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 50px;
+  border-style: none;
+  text-align: center;
+  width: 40px;
+  box-shadow: 2px 0px 10px #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+buttonn:hover {
+  background: var(--quartenary-color);
+  color: var(--primary-color);
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 50px;
+  border-style: none;
+  text-align: center;
+  width: 40px;
+  box-shadow: 2px 0px 10px var(--primary-color);
 }
